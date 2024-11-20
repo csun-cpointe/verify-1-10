@@ -1,0 +1,5 @@
+
+image:
+  name: verify-1-10-tests-docker
+  imagePullPolicy: IfNotPresent
+  dockerRepo: ""
