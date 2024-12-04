@@ -30,8 +30,8 @@ appVersion: "1.0.0"
 # for example usage) in order to override values.
 dependencies:
   - name: aissemble-pipeline-invocation-chart
-    version: 1.10.0
+    version: "1.11.0-SNAPSHOT"
     repository: oci://ghcr.io/boozallen
   - name: aissemble-pipeline-invocation-lib-chart
-    version: 1.10.0
+    version: "1.11.0-SNAPSHOT"
     repository: oci://ghcr.io/boozallen

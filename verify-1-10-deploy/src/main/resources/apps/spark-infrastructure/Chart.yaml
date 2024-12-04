@@ -30,12 +30,12 @@ appVersion: "1.0.0"
 # for example usage) in order to override values.
 dependencies:
   - name: aissemble-spark-history-chart
-    version: 1.10.0
+    version: "1.11.0-SNAPSHOT"
     repository: oci://ghcr.io/boozallen
   - name: aissemble-thrift-server-chart
-    version: 1.10.0
+    version: "1.11.0-SNAPSHOT"
     repository: oci://ghcr.io/boozallen
   - name: aissemble-hive-metastore-service-chart
-    version: 1.10.0
+    version: "1.11.0-SNAPSHOT"
     repository: oci://ghcr.io/boozallen
 

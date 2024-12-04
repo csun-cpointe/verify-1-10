@@ -1,16 +1,20 @@
+{{- if .Values.s3LocalEnabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pipeline-invocation-service
+  name: s3-local
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: verify-1-10
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
+    path: verify-1-10-deploy/src/main/resources/apps/s3-local
+    repoURL: {{ .Values.spec.repo }}
+    targetRevision: {{ .Values.spec.targetRevision }}
     {{ if .Values.spec.helm.valueFiles }}
     helm:
       valueFiles:
@@ -18,10 +22,8 @@ spec:
         - {{ . }}
         {{- end }}
     {{ end }}
-    path: verify-1-10-deploy/src/main/resources/apps/pipeline-invocation-service
-    repoURL: {{ .Values.spec.repo }}
-    targetRevision: {{ .Values.spec.targetRevision }}
   {{- with .Values.spec.syncPolicy }}
   syncPolicy:
     {{- toYaml . | nindent 4 }}
   {{- end }}
+{{- end -}}

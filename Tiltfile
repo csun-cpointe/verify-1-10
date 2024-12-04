@@ -1,7 +1,7 @@
 allow_k8s_contexts('local')
 docker_prune_settings(num_builds=1, keep_recent=1)
 
-aissemble_version = '1.10.0'
+aissemble_version = '1.11.0-SNAPSHOT'
 
 build_args = { 'DOCKER_BASELINE_REPO_ID': 'ghcr.io/',
                'VERSION_AISSEMBLE': aissemble_version}
