@@ -2,7 +2,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
   targetRevision: dev
-  repo: test.org/verify-1-10.git
+  repo: https://github.com/csun-cpointe/verify-1-10.git
   helm:
     valueFiles:
       - values.yaml
